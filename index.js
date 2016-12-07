@@ -39,8 +39,10 @@ app.post('/webhook/', function (req, res) {
 
         if (event.message && event.message.text) {
             let text = event.message.text
-	    let rand = Math.floor(Math.random()*7)
-	    if (text.includes("ode")) {
+	    let rand = Math.floor(Math.random()*8)
+	    if (event.attachments) {
+	        sendTextMessage(sender, "This is attachment content and I don't do attachment content. Stop it. You should feel bad")
+            } else if (text.includes("ode")) {
 	        sendTextMessage(sender, "This is node.js content.")
 	    } else if (text.includes("utin") || text.includes("ernie") || text.includes("illary")) {
 	        sendTextMessage(sender, "This is communist content.")
@@ -58,6 +60,8 @@ app.post('/webhook/', function (req, res) {
 	        sendTextMessage(sender, "I don't know. Angery reacts only.")
 	    } else if (rand === 6) {
 	        sendTextMessage(sender, "This content should not exist.")
+	    } else if (rand === 7) {
+	        sendTextMessage(sender, "This is bad content and you should feel bad.")
 	    } else {
 	        sendTextMessage(sender, "This is sad content.")
 	    }
