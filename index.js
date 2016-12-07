@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
 
         if (event.message && event.message.text) {
             let text = event.message.text
-	    let rand = Math.random()*3/1
+	    let rand = Math.floor(Math.random()*3)
 	    
 	    if (rand === 1) {
 	        sendTextMessage(sender, "This is good content.")
