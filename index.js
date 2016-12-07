@@ -46,7 +46,7 @@ app.post('/webhook/', function (req, res) {
 	        sendTextMessage(sender, "This is node.js content.")
 	    } else if (text.includes("utin") || text.includes("ernie") || text.includes("illary")) {
 	        sendTextMessage(sender, "This is communist content.")
-	    } else if (text.includes("rump") || text.includes("exican") || text.includes("taco")) {
+	    } else if (text.includes("rump") || text.includes("exican") || text.includes("exico") || text.includes("taco")) {
 	        sendTextMessage(sender, "This is wall content.")
 	    } else if (text.includes("cuck") || text.includes("hina")) {
 	        sendTextMessage(sender, "This is trump content.")
