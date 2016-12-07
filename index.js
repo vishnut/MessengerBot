@@ -40,6 +40,7 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
             let text = event.message.text
 	    let rand = Math.random()*3/1
+	    /*
 	    if (rand === 1) {
 	        sendTextMessage(sender, "This is good content.")
 	    } else if (rand === 2)
@@ -47,8 +48,8 @@ app.post('/webhook/', function (req, res) {
 	    } else
 	        sendTextMessage(sender, "This is sad content.")
 	    }
-
-//	    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))	    
+*/
+	    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))	    
 	    //sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200) + Math.random()*3/1)
 	}
     }
