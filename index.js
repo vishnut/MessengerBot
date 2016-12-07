@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
 
         if (event.message && event.message.text) {
             let text = event.message.text
-	    let rand = Math.floor(Math.random()*12)
+	    let rand = Math.floor(Math.random()*13)
 	    if (event.attachments) {
 	        sendTextMessage(sender, "This is attachment content and I don't do attachment content. Stop it. You should feel bad")
             } else if (text.includes("ode")) {
@@ -52,6 +52,8 @@ app.post('/webhook/', function (req, res) {
 	        sendTextMessage(sender, "This is trump content.")
             } else if (text.includes("arambe")) {
 	        sendTextMessage(sender, "This is bad content. You need to let go. Harambe didn't die for your bad memes.")
+            } else if (text.includes("ython")) {
+	        sendTextMessage(sender, "> It's almost 2017.")
 	    } else if (text.length < 2 && rand < 4) {
 	        sendTextMessage(sender, "This is small content. I want more.")
 	    } else if (rand === 1) {
@@ -76,6 +78,8 @@ app.post('/webhook/', function (req, res) {
 	        sendTextMessage(sender, "This is meh content.")
 	    } else if (rand === 11) {
 	        sendTextMessage(sender, "This is cringe content.")
+	    } else if (rand === 12) {
+	        sendTextMessage(sender, "delet this.")
 	    } else {
 	        sendTextMessage(sender, "This is sad content.")
 	    }
