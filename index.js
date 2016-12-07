@@ -50,6 +50,8 @@ app.post('/webhook/', function (req, res) {
 	        sendTextMessage(sender, "This is wall content.")
 	    } else if (text.includes("cuck") || text.includes("hina")) {
 	        sendTextMessage(sender, "This is trump content.")
+            } else if (text.includes("arambe")) {
+	        sendTextMessage(sender, "This is bad content. You need to let go. Harambe didn't die for your bad memes.")
 	    } else if (text.length < 2 && rand < 4) {
 	        sendTextMessage(sender, "This is small content. I want more.")
 	    } else if (rand === 1) {
