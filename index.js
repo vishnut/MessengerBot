@@ -40,7 +40,7 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
             let text = event.message.text
 	    let rand = Math.floor(Math.random()*7)
-	    if (text.includes("ode") {
+	    if (text.includes("ode")) {
 	        sendTextMessage(sender, "This is node.js content.")
 	    } else if (text.includes("utin") || text.includes("ernie") || text.includes("illary")) {
 	        sendTextMessage(sender, "This is communist content.")
