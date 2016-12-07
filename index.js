@@ -54,9 +54,9 @@ app.post('/webhook/', function (req, res) {
 	        sendTextMessage(sender, "This is bad content. You need to let go. Harambe didn't die for your bad memes.")
             } else if (text.includes("ython")) {
 	        sendTextMessage(sender, ">it's almost 2017")
-	        if (text.includes ("2") {
+	        if (text.includes ("2")) {
 		    sendTextMessage(sender, "This is bad content.")
-		} else if (text.includes ("3") {
+		} else if (text.includes ("3")) {
 	            sendTextMessage(sender, "This is good content but not node.js content.")
 		}
 	    } else if (text.length < 2 && rand < 4) {
