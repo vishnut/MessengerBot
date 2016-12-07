@@ -37,12 +37,15 @@ app.post('/webhook/', function (req, res) {
         let event = req.body.entry[0].messaging[i]
         let sender = event.sender.id
 
-        if (event.message && event.message.text) {
-            let text = event.message.text
+        if (event.message) {// && event.message.text) {
+            var text = event.message.text
+	    if (text == null)
+	        text = " "
 	    let rand = Math.floor(Math.random()*13)
-	    if (event.attachments) {
-	        sendTextMessage(sender, "This is attachment content and I don't do attachment content. Stop it. You should feel bad")
-            } else if (text.includes("ode")) {
+//	    if (event.attachments) {
+//	        sendTextMessage(sender, "This is attachment content and I don't do attachment content. Stop it. You should feel bad")
+//            } else 
+	    if (text.includes("ode")) {
 	        sendTextMessage(sender, "This is node.js content.")
 	    } else if (text.includes("utin") || text.includes("ernie") || text.includes("illary")) {
 	        sendTextMessage(sender, "This is communist content.")
