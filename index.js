@@ -42,9 +42,9 @@ app.post('/webhook/', function (req, res) {
 	    let rand = Math.floor(Math.random()*7)
 	    if (text.includes("ode") {
 	        sendTextMessage(sender, "This is node.js content.")
-	    } else if (text.includes("utin" || text.includes("ernie") || text.includes("illary")) {
+	    } else if (text.includes("utin") || text.includes("ernie") || text.includes("illary")) {
 	        sendTextMessage(sender, "This is communist content.")
-	    } else if (text.includes("rump" || text.includes("exican") || text.includes("taco")) {
+	    } else if (text.includes("rump") || text.includes("exican") || text.includes("taco")) {
 	        sendTextMessage(sender, "This is wall content.")
 	    } else if (rand === 1) {
 	        sendTextMessage(sender, "This is good content.")
