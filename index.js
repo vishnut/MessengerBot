@@ -43,9 +43,9 @@ app.post('/webhook/', function (req, res) {
 	    if (rand == 1) {
 	        sendTextMessage(sender, "This is good content.")
 	    } else if (rand == 2)
-	        sendTextMessage(sender, "This is good content.")
+	        sendTextMessage(sender, "This is bad content.")
 	    } else
-	        sendTextMessage(sender, "This is good content.")
+	        sendTextMessage(sender, "This is sad content.")
 	    }
 
 //	    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))	    
