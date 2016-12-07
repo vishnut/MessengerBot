@@ -36,12 +36,9 @@ app.post('/webhook/', function (req, res) {
     for (let i = 0; i < messaging_events.length; i++) {
         let event = req.body.entry[0].messaging[i]
         let sender = event.sender.id
-	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
         if (event.message && event.message.text) {
             let text = event.message.text
-            for( var i=0; i < 5; i++ )
-                text += possible.charAt(Math.floor(Math.random() * possible.length))
 
 //	    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))	    
 	    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200) + Math.random()*3/1)
