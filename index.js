@@ -40,7 +40,7 @@ app.post('/webhook/', function (req, res) {
         if (event.message) {// && event.message.text) {
             var text = event.message.text
 	    if (text == null)
-	        text = " "
+	        text = "disisanattachment"
 	    let rand = Math.floor(Math.random()*13)
 //	    if (event.attachments) {
 //	        sendTextMessage(sender, "This is attachment content and I don't do attachment content. Stop it. You should feel bad")
