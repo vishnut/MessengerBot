@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
 
         if (event.message && event.message.text) {
             let text = event.message.text
-	    let rand = Math.floor(Math.random()*10)
+	    let rand = Math.floor(Math.random()*12)
 	    if (event.attachments) {
 	        sendTextMessage(sender, "This is attachment content and I don't do attachment content. Stop it. You should feel bad")
             } else if (text.includes("ode")) {
@@ -57,7 +57,7 @@ app.post('/webhook/', function (req, res) {
 	    } else if (rand === 4) {
 	        sendTextMessage(sender, "This is not content.")
 	    } else if (rand === 5) {
-	        sendTextMessage(sender, "I don't know. Angery reacts only.")
+	        sendTextMessage(sender, "I don't know what content this is. Angery reacts only.")
 	    } else if (rand === 6) {
 	        sendTextMessage(sender, "This content should not exist.")
 	    } else if (rand === 7) {
@@ -66,12 +66,14 @@ app.post('/webhook/', function (req, res) {
 	        sendTextMessage(sender, "This is ok content.")
 	    } else if (rand === 9) {
 	        sendTextMessage(sender, "tbh this is great content.")
+	    } else if (rand === 10) {
+	        sendTextMessage(sender, "This is meh content.")
+	    } else if (rand === 11) {
+	        sendTextMessage(sender, "This is cringe content.")
 	    } else {
 	        sendTextMessage(sender, "This is sad content.")
 	    }
 
-//	    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))	    
-	    //sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200) + Math.random()*3/1)
 	}
     }
     res.sendStatus(200)
