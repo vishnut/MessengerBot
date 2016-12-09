@@ -41,7 +41,7 @@ app.post('/webhook/', function (req, res) {
             var text = event.message.text
 	    if (text == null)
 	        text = "disisanattachment"
-	    let rand = Math.floor(Math.random()*13)
+	    let rand = Math.floor(Math.random()*14)
 //	    if (event.attachments) {
 //	        sendTextMessage(sender, "This is attachment content and I don't do attachment content. Stop it. You should feel bad")
 //            } else 
@@ -88,6 +88,8 @@ app.post('/webhook/', function (req, res) {
 	        sendTextMessage(sender, "This is cringe content.")
 	    } else if (rand === 12) {
 	        sendTextMessage(sender, "delet this.")
+	    } else if (rand === 13) {
+	        sendTextMessage(sender, "This content is spicy.")
 	    } else {
 	        sendTextMessage(sender, "This is sad content.")
 	    }
